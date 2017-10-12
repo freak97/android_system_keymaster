@@ -38,6 +38,7 @@ cc_library_shared {
     ],
     stl: "none",
     clang: true,
+    sdclang: false,
     // TODO(krasin): reenable coverage flags, when the new Clang toolchain is released.
     // Currently, if enabled, these flags will cause an internal error in Clang.
     clang_cflags: ["-fno-sanitize-coverage=edge,indirect-calls,8bit-counters,trace-cmp"],
@@ -108,6 +109,7 @@ cc_library_shared {
     // and which are also available in the trusty context.
     stl: "none",
     clang: true,
+    sdclang: false,
     clang_cflags: [
         "-Wno-error=unused-const-variable",
         "-Wno-error=unused-private-field",
@@ -151,6 +153,7 @@ cc_library_shared {
         "-Wunused",
     ],
     clang: true,
+    sdclang: false,
     clang_cflags: [
         "-Wno-error=unused-const-variable",
         "-Wno-error=unused-private-field",
@@ -193,6 +196,7 @@ cc_library {
         "-Wunused",
     ],
     clang: true,
+    sdclang: false,
     clang_cflags: [
         "-Wno-error=unused-const-variable",
         "-Wno-error=unused-private-field",
