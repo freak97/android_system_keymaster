@@ -26,7 +26,10 @@ extern const nothrow_t nothrow;
 }
 void* operator new(size_t __sz, const std::nothrow_t&);
 void* operator new[](size_t __sz, const std::nothrow_t&);
+
+#ifdef _LIBCPP_HAS_NO_SIZED_DEALLOCATION
 void operator delete(void* ptr);
 void operator delete[](void* ptr);
+#endif 
 
 #endif  // INCLUDE_KEYMASTER_NEW_
